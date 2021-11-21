@@ -1,7 +1,6 @@
 package com.crud.tasks.service;
 
 import com.crud.tasks.domain.Task;
-import com.crud.tasks.domain.TaskDto;
 import com.crud.tasks.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,7 +18,7 @@ public class DbService {
         return repository.findAll();
     }
 
-    public Task getTaskById(long taskId) {
+    public Optional<Task> getTaskById(long taskId) {
         return repository.findById(taskId);
     }
 
