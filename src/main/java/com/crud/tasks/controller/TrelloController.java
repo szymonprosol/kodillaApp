@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class TrelloController {
 
+    private static final String KODILLA = "Kodilla";
     private final TrelloClient trelloClient;
 
     @GetMapping("getTrelloBoards")
@@ -23,9 +24,9 @@ public class TrelloController {
         List<TrelloBoardDto> trelloBoards = trelloClient.getTrelloBoards();
 
         trelloBoards.stream()
-                .filter(a -> !a.getId().isEmpty() && !a.getName().isEmpty())
-                .filter(b -> b.getName().contains("Kodilla"))
+                .filter(trelloBoardDto -> !trelloBoardDto.getId().isEmpty() && !trelloBoardDto.getName().isEmpty())
+                .filter(trelloBoardDto -> trelloBoardDto.getName().contains(KODILLA))
                 .collect(Collectors.toList())
-                .forEach(c -> {System.out.println(c.getId() + " " + c.getName());});
+                .forEach(trelloBoardDto -> System.out.println(trelloBoardDto.getId() + " " + trelloBoardDto.getName()));
     }
 }
