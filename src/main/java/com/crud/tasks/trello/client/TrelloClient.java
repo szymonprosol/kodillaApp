@@ -8,6 +8,7 @@ import com.crud.tasks.trello.config.TrelloConfig;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
@@ -17,6 +18,7 @@ import java.net.URI;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Profile("heroku")
 @Component
 @RequiredArgsConstructor
 public class TrelloClient {

@@ -3,7 +3,9 @@ package com.crud.tasks.domain;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import org.springframework.context.annotation.Profile;
 
+@Profile("heroku")
 @Builder
 @Getter
 public class Mail {
