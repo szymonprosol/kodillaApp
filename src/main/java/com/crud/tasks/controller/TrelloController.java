@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 @Profile("heroku")
 @RestController
 @RequestMapping("/v1/trello")
+@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class TrelloController {
 
