@@ -5,13 +5,16 @@ import com.crud.tasks.domain.TrelloBoardDto;
 import com.crud.tasks.domain.TrelloCardDto;
 import com.crud.tasks.trello.client.TrelloClient;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Profile("heroku")
 @RestController
 @RequestMapping("/v1/trello")
+@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class TrelloController {
 
