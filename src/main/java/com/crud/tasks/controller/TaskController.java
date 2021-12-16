@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Profile("heroku")
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/v1/task")

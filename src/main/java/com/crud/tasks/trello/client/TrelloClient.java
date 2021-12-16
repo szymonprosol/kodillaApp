@@ -18,7 +18,6 @@ import java.net.URI;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Profile("heroku")
 @Component
 @RequiredArgsConstructor
 public class TrelloClient {

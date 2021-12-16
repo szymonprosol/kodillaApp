@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Profile;
 
-@Profile("heroku")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Profile;
 
 import java.util.List;
 
-@Profile("heroku")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

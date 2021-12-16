@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Profile("heroku")
 @Slf4j
 @Service
 @RequiredArgsConstructor

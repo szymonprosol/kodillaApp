@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Getter;
 import org.springframework.context.annotation.Profile;
 
-@Profile("heroku")
 @Builder
 @Getter
 @AllArgsConstructor
