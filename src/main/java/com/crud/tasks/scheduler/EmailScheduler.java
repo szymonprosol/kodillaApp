@@ -16,15 +16,19 @@ public class EmailScheduler {
         private final SimpleEmailService simpleEmailService;
         private final TaskRepository taskRepository;
         private final AdminConfig adminConfig;
+        private String nrOfTasks;
 
         @Scheduled(cron = "0 0 10 * * *")
         public void sendInformationEmail() {
                 long size = taskRepository.count();
+
+                nrOfTasks = size == 1 ? " task" : " tasks";
+
                 simpleEmailService.send(
                         new Mail(
                                 adminConfig.getAdminMail(),
                                 SUBJECT,
-                                "Currently in database you got: " + size + " tasks",
+                                "Currently in database you got: " + nrOfTasks,
                                 null
                         )
                 );
